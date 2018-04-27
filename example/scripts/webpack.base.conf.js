@@ -10,7 +10,7 @@ module.exports = {
   context: path.resolve(__dirname, '../'),
   entry: resolve('src/index.js'),
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, '../../docs'),
     filename: 'index.js',
     publicPath: process.env.NODE_ENV === 'production' ? config.build.assetsPublicPath : config.dev.assetsPublicPath
     // libraryTarget: 'umd',
