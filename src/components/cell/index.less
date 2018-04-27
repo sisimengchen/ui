@@ -1,0 +1,164 @@
+@import "../../style/base.less";
+.lmui-cell {
+  background-color: #fff;
+  box-sizing: border-box;
+  font-size: 18px;
+  color: #999;
+  min-height: 45px;
+  display: block;
+  overflow: hidden;
+  position: relative;
+  text-decoration: none;
+
+  img {
+    vertical-align: middle;
+  }
+
+  &:first-child .lmui-cell-wrapper {
+    background-origin: border-box;
+  }
+
+  &:last-child {
+    background-image: -webkit-linear-gradient(
+      bottom,
+      #d9d9d9,
+      #d9d9d9 50%,
+      transparent 50%
+    );
+    background-image: linear-gradient(
+      0deg,
+      #d9d9d9,
+      #d9d9d9 50%,
+      transparent 50%
+    );
+    background-size: 100% 1px;
+    background-repeat: no-repeat;
+    background-position: bottom;
+  }
+}
+
+.lmui-cell-wrapper {
+  background-image: -webkit-linear-gradient(
+    top,
+    #d9d9d9,
+    #d9d9d9 50%,
+    transparent 50%
+  );
+  background-image: linear-gradient(
+    180deg,
+    #d9d9d9,
+    #d9d9d9 50%,
+    transparent 50%
+  );
+  background-size: 120% 1px;
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-origin: content-box;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 14px;
+  line-height: 1;
+  min-height: inherit;
+  overflow: hidden;
+  padding: 0 16px;
+  width: 100%;
+}
+
+.lmui-cell-mask {
+  &::after {
+    background-color: #000;
+    content: " ";
+    opacity: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+  }
+
+  &:active::after {
+    opacity: 0.1;
+  }
+}
+
+.lmui-cell-text {
+  margin-left: 10px;
+  font-size: 15px;
+  letter-spacing: -0.84px;
+  vertical-align: middle;
+
+  &:first-child {
+    margin-left: 0;
+
+    &:only-child {
+      font-size: 18px;
+    }
+  }
+}
+
+.lmui-cell-label {
+  color: #888;
+  display: block;
+  font-size: 12px;
+  margin-top: 6px;
+}
+
+.lmui-cell-title {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  color: #333;
+  // font-size: 0;
+
+  div {
+    font-size: 18px;
+  }
+}
+
+.lmui-cell-value {
+  color: #888;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  letter-spacing: -0.65px;
+
+  &.is-link {
+    margin-right: 18px;
+  }
+}
+
+.lmui-cell-left {
+  position: absolute;
+  height: 100%;
+  left: 0;
+  transform: translate3d(-100%, 0, 0);
+}
+
+.lmui-cell-right {
+  position: absolute;
+  height: 100%;
+  right: 0;
+  top: 0;
+  transform: translate3d(100%, 0, 0);
+}
+
+.lmui-cell-allow-right::after {
+  border: solid 2px #c8c8cd;
+  border-bottom-width: 0;
+  border-left-width: 0;
+  content: " ";
+  top: 50%;
+  right: 20px;
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  transform: translateY(-50%) rotate(45deg);
+}

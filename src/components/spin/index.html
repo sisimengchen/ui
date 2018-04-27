@@ -1,0 +1,21 @@
+<div class="lmui-spin">
+  <div class="lmui-spin-container <%=containerClass%> <%=type%>">
+    <svg class="loadding" viewBox="0 0 200 200">
+      <circle cx="100" cy="100" r="95"></circle>
+      <g class="right">
+        <path d="m85,132l61,-74" />
+        <path d="m85,132l-36,-42" />
+      </g>
+      <g class="wrong">
+        <path d="m100,100l-34,-34" />
+        <path d="m100,100l34,34" />
+        <path d="m100,100l-34,34" />
+        <path d="m100,100l34,-34" />
+      </g>
+    </svg>
+  </div>
+  <p class="lmui-spin-text" <% if(!text) { %>style="display:none;"
+    <% } %>>
+      <%=text%>
+  </p>
+</div>

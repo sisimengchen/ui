@@ -1,0 +1,14 @@
+<div class="lmui-actionsheet">
+  <ul class="lmui-actionsheet-container">
+  <% for(var i = 0; i < data.length; i++) { %>
+    <li class="lmui-actionsheet-item" data-index="<%=i%>">
+    <%=data[i].text%>
+    </li>
+  <% } %>
+  <% if(cancelText) { %>
+    <li class="lmui-actionsheet-item">
+      <%=cancelText%>
+    </li>
+  <% } %>
+  </ul>
+</div>

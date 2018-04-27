@@ -1,0 +1,235 @@
+@import "../../style/base.less";
+.lmui-dialog {
+  position: fixed;
+  line-height: 1.5;
+  background-color: #fff;
+  .lmui-invisible;
+
+  .lmui-dialog-head {
+    // padding: 15px 0 0;
+    .lmui-dialog-title {
+      text-align: center;
+    }
+
+    .icon {
+      width: 12px;
+      height: 12px;
+      position: relative;
+      display: block;
+      cursor: pointer;
+      float: right;
+
+      .icon-plus {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 6px;
+        height: 6px;
+        border-width: 0 1px 1px 0;
+        border-style: solid;
+        border-color: #666;
+
+        &:after {
+          content: "";
+          position: absolute;
+          top: 6px;
+          left: 6px;
+          border-width: 1px 0 0 1px;
+          width: 6px;
+          height: 6px;
+          border-style: solid;
+          border-color: #666;
+        }
+      }
+    }
+  }
+
+  .lmui-dialog-body {
+    position: relative;
+    text-align: center;
+    // padding: 10px 20px 15px;
+  }
+
+  .lmui-dialog-foot {
+    display: flex;
+
+    .lmui-dialog-button {
+      box-sizing: border-box;
+      text-align: center;
+      cursor: pointer;
+      flex: 1;
+      border-right: 1px solid #e6e6e6;
+      // line-height: 35px;
+      padding: 3%;
+
+      &:last-child {
+        border-right: 0;
+      }
+    }
+  }
+}
+
+.lmui-dialog-center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.lmui-dialog-center-enter {
+  animation-name: lmui-dialog-center-in;
+  .lmui-animate;
+}
+
+.lmui-dialog-center-leave {
+  animation-name: lmui-dialog-center-out;
+  .lmui-animate;
+}
+
+@keyframes lmui-dialog-center-in {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+
+  100% {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes lmui-dialog-center-out {
+  0% {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  100% {
+    visibility: hidden;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+}
+
+.lmui-dialog-top {
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.lmui-dialog-top-enter {
+  animation-name: lmui-dialog-top-in;
+  .lmui-animate;
+}
+
+.lmui-dialog-top-leave {
+  animation-name: lmui-dialog-top-out;
+  .lmui-animate;
+}
+
+@keyframes lmui-dialog-top-in {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+    transform: translate(-50%, -100%);
+  }
+
+  100% {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+@keyframes lmui-dialog-top-out {
+  0% {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+
+  100% {
+    visibility: hidden;
+    opacity: 0;
+    transform: translate(-50%, -100%);
+  }
+}
+
+.lmui-dialog-bottom {
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.lmui-dialog-bottom-enter {
+  animation-name: lmui-dialog-bottom-in;
+  .lmui-animate;
+}
+
+.lmui-dialog-bottom-leave {
+  animation-name: lmui-dialog-bottom-out;
+  .lmui-animate;
+}
+
+@keyframes lmui-dialog-bottom-in {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+    transform: translate(-50%, 100%);
+  }
+
+  100% {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+@keyframes lmui-dialog-bottom-out {
+  0% {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+
+  100% {
+    visibility: hidden;
+    opacity: 0;
+    transform: translate(-50%, 100%);
+  }
+}
+
+.lmui-toast {
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 5% 7%;
+  box-shadow: 0 0 10px #626262;
+  color: #fff;
+  border-radius: 5px;
+
+  .lmui-dialog-body {
+    text-align: center;
+    font-size: 14px;
+  }
+}
+
+.lmui-alert {
+  box-sizing: border-box;
+  box-shadow: 0 0 10px #626262;
+  color: #666;
+  border-radius: 5px;
+
+  .lmui-dialog-body {
+    padding: 10% 10% 8% 10%;
+    font-size: 14px;
+  }
+
+  .lmui-dialog-foot {
+    border-top: 1px solid #e6e6e6;
+
+    .lmui-dialog-button {
+    }
+  }
+}

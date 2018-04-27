@@ -1,0 +1,33 @@
+<header class="lmui-header <%=containerClass%><% if(fixed) { %> is-fixed<% } %>">
+  <div class="lmui-header-button is-left">
+  <% if (data && data.left) { %>
+    <a href="<%=data.left.link%>" class="router-link-active" data-id="<%=data.left.id%>">
+      <button class="lmui-button lmui-button--default lmui-button--normal">
+        <% if (data.left.icon) { %>
+        <span class="lmui-button-icon"><i class="<%=data.left.icon%>"></i></span>
+        <% } else if (data.left.img) { %>
+        <span class="lmui-button-icon"><img src="<%=data.left.img%>"></span>
+        <% } %>
+        <label class="mint-button-text"><%=data.left.text%></label>
+      </button>
+    </a>
+  <% } %>
+  </div>
+  <h1 class="lmui-header-title"><%=title%></h1>
+  <div class="lmui-header-button is-right">
+  <% if (data && data.right) { %>
+  <% for(var i = 0; i < data.right.length; i++) { %>
+    <a href="<%=data.right[i].link%>" class="router-link-active" data-id="<%=data.right[i].id%>">
+        <button class="lmui-button lmui-button--default lmui-button--normal">
+          <% if (data.right[i].icon) { %>
+          <span class="lmui-button-icon"><i class="<%=data.right[i].icon%>"></i></span>
+          <% } else if (data.right[i].img) { %>
+          <span class="lmui-button-icon"><img src="<%=data.right[i].img%>"></span>
+          <% } %>
+          <label class="mint-button-text"><%=data.right[i].text%></label>
+        </button>
+      </a>
+  <% } %>
+  <% } %>
+  </div>
+</header>

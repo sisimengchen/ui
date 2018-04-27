@@ -1,0 +1,14 @@
+{
+  "name": "popover",
+  "version": "1.0.0",
+  "main": "index.js",
+  "library": {
+    "root": "Popover",
+    "amd": "lmfe.popover",
+    "commonjs": "lmfe.popover"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.easecreate.com/lmfe/popover.git"
+  }
+}

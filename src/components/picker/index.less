@@ -1,0 +1,78 @@
+@import "../../style/base.less";
+.lmui-picker {
+  position: relative;
+  overflow: hidden;
+  background-color: #fff;
+  height: 250px;
+
+  .lmui-picker-container {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    overflow: visible;
+    user-select: none;
+    background-color: #fff;
+    top: 50%;
+    transform: translateY(-50%);
+
+    &:before {
+      content: " ";
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      height: 1px;
+      border-top: 1px solid #e5e5e5;
+      color: #e5e5e5;
+      transform-origin: 0 0;
+      transform: scaleY(0.5);
+    }
+
+    &:after {
+      content: " ";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      height: 1px;
+      border-bottom: 1px solid #e5e5e5;
+      color: #e5e5e5;
+      transform-origin: 0 100%;
+      transform: scaleY(0.5);
+    }
+
+    .lmui-picker-content {
+      .lmui-picker-item {
+        height: 50px;
+        width: 100%;
+        display: block;
+        text-align: left;
+        font-size: 20px;
+        line-height: 50px;
+        text-align: center;
+        color: #000;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+    }
+  }
+
+  .lmui-picker-mask {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+    top: 0;
+    height: 100%;
+    background: linear-gradient(
+      180deg,
+      hsla(0, 0%, 100%, 0.95),
+      hsla(0, 0%, 100%, 0.6)
+    ),
+      linear-gradient(0deg, hsla(0, 0%, 100%, 0.95), hsla(0, 0%, 100%, 0.6));
+    background-repeat: no-repeat;
+    background-position: top, bottom;
+    background-size: 100% 100px;
+  }
+}

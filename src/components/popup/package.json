@@ -1,0 +1,14 @@
+{
+  "name": "popup",
+  "version": "1.0.0",
+  "main": "index.js",
+  "library": {
+    "root": "Popup",
+    "amd": "lmfe.popup",
+    "commonjs": "lmfe.popup"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.easecreate.com/lmfe/popup.git"
+  }
+}

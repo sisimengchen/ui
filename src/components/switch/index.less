@@ -1,0 +1,72 @@
+@import "../../style/base.less";
+.lmui-switch {
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+
+  * {
+    pointer-events: none;
+  }
+}
+
+.lmui-switch-label {
+  margin-left: 10px;
+  display: inline-block;
+
+  &:empty {
+    margin-left: 0;
+  }
+}
+
+.lmui-switch-core {
+  display: inline-block;
+  position: relative;
+  width: 52px;
+  height: 31px;
+  border: 1px solid #d9d9d9;
+  border-radius: 16px;
+  box-sizing: border-box;
+  background: #d9d9d9;
+
+  &::after,
+  &::before {
+    content: " ";
+    top: 0;
+    left: 0;
+    position: absolute;
+    transition: transform 0.3s;
+    border-radius: 15px;
+  }
+
+  &::after {
+    width: 29px;
+    height: 29px;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  }
+
+  &::before {
+    width: 50px;
+    height: 29px;
+    background-color: #fdfdfd;
+  }
+}
+
+.lmui-switch-input {
+  display: none;
+
+  &:checked + .lmui-switch-core {
+    border-color: #4a90e2;
+    background-color: #4a90e2;
+  }
+
+  &:checked + .lmui-switch-core::before {
+    transform: scale(0);
+  }
+
+  &:checked + .lmui-switch-core::after {
+    transform: translateX(20px);
+  }
+}

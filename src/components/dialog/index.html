@@ -1,0 +1,15 @@
+<div class="lmui-dialog <%=containerClass%> lmui-dialog-<%=placement%>" style="width:<%=width%>;height:<%=height%>;">
+  <div class="lmui-dialog-head">
+    <% if (title) { %>
+    <div class="lmui-dialog-title"><%=title%></div>
+    <% } %>
+  </div>
+  <div class="lmui-dialog-body"><%=content%></div>
+  <% if (button && button.length) { %>
+  <div class="lmui-dialog-foot">
+  <% for (var i = 0; i < btns.length; i++) { %>
+    <a href="javascript:void(0)" class="lmui-dialog-button <%=btns[i].classnames%>" data-action="btn" data-retid="<%=btns[i].id%>"><%=btns[i].text%></a>
+  <% } %>
+  </div>
+  <% } %>
+</div>

@@ -1,0 +1,28 @@
+<div class="lmui-radiolist <%=containerClass%>">
+  <% if (title) { %>
+  <label class="lmui-radiolist-title"><%=title%></label>
+  <% } %>
+  <% for (var i = 0; i < data.length; i++) { %>
+  <a class="lmui-cell">
+    <div class="lmui-cell-left"></div>
+    <div class="lmui-cell-wrapper">
+      <div class="lmui-cell-title">
+        <label class="lmui-radiolist-label">
+          <span class="lmui-radio">
+            <input type="radio" class="lmui-radio-input" value="<%=data[i].value%>" data-index="<%=i%>"
+            <% if(data[i].disabled) { %>disabled="disabled"<% } %>
+            <% if(data[i].checked) { %>checked="true"<% } %>
+            >
+            <span class="lmui-radio-core"></span>
+          </span>
+          <span class="lmui-radio-label"><%=data[i].label%></span>
+        </label>
+      </div>
+      <div class="lmui-cell-value">
+        <span></span>
+      </div>
+    </div>
+    <div class="lmui-cell-right"></div>
+  </a>
+  <% } %>
+</div>

@@ -1,0 +1,248 @@
+@import "../../style/base.less";
+.lmui-popup {
+  position: fixed;
+  display: block;
+  max-height: 100%;
+  max-width: 100%;
+  .lmui-invisible;
+
+  .lmui-popup-hv {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .lmui-popup-h {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+
+  .lmui-popup-v {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+}
+
+.lmui-popup-bottom {
+  bottom: 0;
+  width: 100%;
+  transform: translate(0, 0);
+}
+
+.lmui-popup-bottom-enter {
+  animation-name: lmui-popup-bottom-in;
+  .lmui-animate;
+}
+
+.lmui-popup-bottom-leave {
+  animation-name: lmui-popup-bottom-out;
+  .lmui-animate;
+}
+
+@keyframes lmui-popup-bottom-in {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+    transform: translate(0, 100%);
+  }
+
+  100% {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes lmui-popup-bottom-out {
+  0% {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+
+  100% {
+    visibility: hidden;
+    opacity: 0;
+    transform: translate(0, 100%);
+  }
+}
+
+.lmui-popup-top {
+  top: 0;
+  width: 100%;
+  transform: translate(0, 0);
+}
+
+.lmui-popup-top-enter {
+  animation-name: lmui-popup-top-in;
+  .lmui-animate;
+}
+
+.lmui-popup-top-leave {
+  animation-name: lmui-popup-top-out;
+  .lmui-animate;
+}
+
+@keyframes lmui-popup-top-in {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+    transform: translate(0, -100%);
+  }
+
+  100% {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes lmui-popup-top-out {
+  0% {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+
+  100% {
+    visibility: hidden;
+    opacity: 0;
+    transform: translate(0, -100%);
+  }
+}
+
+.lmui-popup-left {
+  left: 0;
+  top: 0;
+  transform: translate(0, 0);
+}
+
+.lmui-popup-left-enter {
+  animation-name: lmui-popup-left-in;
+  .lmui-animate;
+}
+
+.lmui-popup-left-leave {
+  animation-name: lmui-popup-left-out;
+  .lmui-animate;
+}
+
+@keyframes lmui-popup-left-in {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+    transform: translate(-100%, 0);
+  }
+
+  100% {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes lmui-popup-left-out {
+  0% {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+
+  100% {
+    visibility: hidden;
+    opacity: 0;
+    transform: translate(-100%, 0);
+  }
+}
+
+.lmui-popup-right {
+  right: 0;
+  top: 0;
+  transform: translate(0, 0);
+}
+
+.lmui-popup-right-enter {
+  animation-name: lmui-popup-right-in;
+  .lmui-animate;
+}
+
+.lmui-popup-right-leave {
+  animation-name: lmui-popup-right-out;
+  .lmui-animate;
+}
+
+@keyframes lmui-popup-right-in {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+    transform: translate(100%, 0);
+  }
+
+  100% {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes lmui-popup-right-out {
+  0% {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+
+  100% {
+    visibility: hidden;
+    opacity: 0;
+    transform: translate(100%, 0);
+  }
+}
+
+.lmui-popup-center {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1, 1);
+}
+
+.lmui-popup-center-enter {
+  animation-name: lmui-popup-center-in;
+  .lmui-animate;
+}
+
+.lmui-popup-center-leave {
+  animation-name: lmui-popup-center-out;
+  .lmui-animate;
+}
+
+@keyframes lmui-popup-center-in {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0, 0);
+  }
+
+  100% {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1, 1);
+  }
+}
+
+@keyframes lmui-popup-center-out {
+  0% {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1, 1);
+  }
+
+  100% {
+    visibility: hidden;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0, 0);
+  }
+}

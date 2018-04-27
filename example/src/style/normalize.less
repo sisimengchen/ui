@@ -1,0 +1,79 @@
+/******************************************************************************************
+ * 基础通用样式
+ */
+
+
+/* 让高度真正100％ */
+
+html {
+	height: 100%;
+}
+
+body {
+	min-height: 100%;
+	-webkit-overflow-scrolling: touch;
+}
+
+
+/* 要注意表单元素并不继承父级 font 的问题 */
+
+body,
+button,
+input,
+select,
+textarea {
+	font: 12px/1.5 arial, simsun;
+}
+
+input,
+select,
+textarea {
+	font-size: 100%;
+}
+
+
+/* 让链接在 hover 状态下显示下划线 */
+
+a:hover {
+	text-decoration: underline;
+}
+
+
+/* 默认不显示下划线，保持页面简洁 */
+
+ins,
+a {
+	text-decoration: none;
+}
+
+
+/*唯一元素noScript*/
+
+noscript {
+	position: relative;
+	display: block;
+	z-index: 999999;
+	background: #FFF8DB;
+	color: #333;
+	line-height: 34px;
+	text-align: center;
+	border-bottom: 1px solid #ddd;
+	a {
+		text-decoration: underline;
+		cursor: pointer;
+	}
+}
+
+
+/*IE9以下提示条*/
+
+.m-browserupdate {
+	background: #FFF8DB;
+	color: #333;
+	line-height: 34px;
+	text-align: center;
+	border-bottom: 1px solid #ddd;
+	a {
+		text-decoration: underline;
+	}
+}

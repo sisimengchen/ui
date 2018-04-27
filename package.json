@@ -1,0 +1,48 @@
+{
+  "name": "lmui",
+  "version": "0.0.1",
+  "description": "移动端ui组件",
+  "main": "./dist/lmui-esm/index.js",
+  "scripts": {
+    "build": "node scripts/build.js",
+    "dev": "export NODE_ENV=development && npm run build",
+    "pro": "export NODE_ENV=production && npm run build"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.2",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-preset-env": "^1.6.1",
+    "cssnano": "^3.10.0",
+    "eslint": "^4.19.1",
+    "eslint-config-lmfe": "0.0.1",
+    "html-minifier": "^3.5.15",
+    "less": "^3.0.2",
+    "postcss-cssnext": "^3.1.0",
+    "rollup": "^0.58.2",
+    "rollup-plugin-alias": "^1.4.0",
+    "rollup-plugin-babel": "^3.0.4",
+    "rollup-plugin-commonjs": "^9.1.0",
+    "rollup-plugin-node-resolve": "^3.3.0",
+    "rollup-plugin-postcss": "^1.6.1",
+    "rollup-plugin-uglify": "^3.0.0"
+  },
+  "browserslist": [
+    "> 0.1%",
+    "last 10 versions",
+    "not ie <= 8"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sisimengchen/ui.git"
+  },
+  "keywords": [
+    "ui",
+    "component",
+    "mobile",
+    "es6"
+  ],
+  "author": "mengchen",
+  "license": "MIT",
+  "homepage": "https://github.com/sisimengchen/ui"
+}

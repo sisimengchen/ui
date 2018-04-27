@@ -1,0 +1,98 @@
+@import "./style/reset.less";
+@import "./style/normalize.less";
+@bs: 100rem;
+@brem: 100rem;
+@brem2: 100rem;
+@bremz: 100rem;
+@bremZ: 100rem;
+@b: 100rem;
+
+html,
+body {
+  font: 14px Arial, Helvetica, sans-serif;
+  color: #666;
+  background-color: #eee;
+  -webkit-text-size-adjust: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  -webkit-overflow-scrolling: touch;
+}
+
+a,
+a:focus {
+  color: inherit;
+}
+
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+button,
+input,
+select,
+textarea {
+  font: 14px Arial, Helvetica, sans-serif;
+  color: #666;
+  outline: none;
+}
+
+textarea.fixAndroidKeyboard:focus,
+input.fixAKeyboard:focus {
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-user-modify: read-write-plaintext-only;
+}
+
+#app {
+  width: 100%;
+}
+
+#header{
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  #app {
+    max-width: 640px;
+    margin: 0 auto;
+  }
+  #header {
+    max-width: 640px;
+    margin: 0 auto;
+  }
+}
+
+.page-button {
+  padding: 0 15px 15px;
+
+  .page-button-group {
+    margin-bottom: 15px;
+  }
+
+  .page-button-group > * {
+    margin-bottom: 15px;
+  }
+}
+
+.page-title {
+  font-size: 20px;
+  margin: 20px auto;
+  text-align: center;
+  display: block;
+  line-height: 1;
+}
+
+.page-part {
+  margin-bottom: 15px;
+}

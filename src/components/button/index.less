@@ -1,0 +1,95 @@
+@import "../../style/base.less";
+.lmui-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 2px;
+  border: 0;
+  box-sizing: border-box;
+  color: inherit;
+  display: block;
+  font-size: 15px;
+  height: 40px;
+  outline: 0;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+
+  &::after {
+    background-color: #000;
+    content: " ";
+    opacity: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+  }
+
+  &:not(.is-disabled):active::after {
+    opacity: 0.4;
+  }
+
+  &.is-disabled {
+    border: 0;
+    color: #999;
+    background: #e5e5e5;
+  }
+}
+
+.lmui-button-icon {
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.lmui-button-default {
+  border: 1px solid #999;
+  color: #666;
+  background-color: #f6f8fa;
+
+  /* box-shadow: $button-default-box-shadow; */
+  &.is-plain {
+    border: 1px solid #4990e2;
+    background-color: transparent;
+    box-shadow: none;
+    color: #4990e2;
+  }
+}
+
+.lmui-button-primary {
+  color: #7c5d48;
+  background-color: #fdce43;
+
+  &.is-plain {
+    border: 1px solid #f60;
+    background-color: transparent;
+    color: #f60;
+  }
+}
+
+// .lmui-button-danger {
+//   color: #fff;
+//   background-color: #ef4f4f;
+//   &.is-plain {
+//     border: 1px solid #ef4f4f;
+//     background-color: transparent;
+//     color: #ef4f4f;
+//   }
+// }
+
+.lmui-button-large {
+  display: block;
+  width: 100%;
+}
+
+.lmui-button-normal {
+  display: inline-block;
+  padding: 0 12px;
+}
+
+.lmui-button-small {
+  display: inline-block;
+  font-size: 14px;
+  padding: 0 16px;
+  height: 30px;
+}

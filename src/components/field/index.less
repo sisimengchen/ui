@@ -1,0 +1,96 @@
+@import "../../style/base.less";
+.lmui-field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+
+  .lmui-cell-title {
+    width: 80px;
+    -webkit-box-flex: 0;
+    -ms-flex: none;
+    flex: none;
+  }
+
+  .lmui-cell-text:first-child:only-child {
+    font-size: 19px;
+  }
+
+  .lmui-cell-value {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    color: inherit;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 18px;
+  }
+
+  &.is-nolabel .lmui-cell-title {
+    display: none;
+  }
+
+  &.is-textarea {
+    -webkit-box-align: inherit;
+    -ms-flex-align: inherit;
+    align-items: inherit;
+
+    .lmui-cell-title {
+      padding: 10px 0;
+    }
+
+    .lmui-cell-value {
+      padding: 5px 0;
+    }
+  }
+}
+
+.lmui-field-core {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0;
+  border: 0;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  outline: 0;
+  line-height: 1.6;
+  font-size: inherit;
+  width: 100%;
+}
+
+.lmui-field-clear {
+  opacity: 0.2;
+}
+
+.lmui-field-state {
+  color: inherit;
+  margin-left: 20px;
+
+  .mintui {
+    font-size: 20px;
+  }
+
+  &.is-default {
+    margin-left: 0;
+  }
+
+  &.is-success {
+    color: #4caf50;
+  }
+
+  &.is-warning {
+    color: #ffc107;
+  }
+
+  &.is-error {
+    color: #f44336;
+  }
+}
+
+.lmui-field-other {
+  top: 0;
+  right: 0;
+  position: relative;
+}

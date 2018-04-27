@@ -1,0 +1,264 @@
+@import "../../style/base.less";
+.lmui-tooltip-root {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  .lmui-tooltip {
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: auto;
+    user-select: text;
+    white-space: normal;
+    font-size: 12px;
+    line-height: 1.5;
+    font-weight: 400;
+    text-align: left;
+    backface-visibility: hidden;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: visibility, opacity, padding 0.3s;
+
+    .lmui-tooltip-content {
+      position: relative;
+
+      .lmui-tooltip-arrow {
+        position: absolute;
+        display: block;
+        width: 0;
+        height: 0;
+        border-color: transparent;
+        border-style: solid;
+        border-width: 5px;
+      }
+
+      .lmui-tooltip-inner {
+        box-sizing: border-box;
+        max-width: 250px;
+        padding: 8px 10px;
+        color: #fff;
+        text-align: left;
+        text-decoration: none;
+        background-color: rgba(64, 64, 64, 0.85);
+        border-radius: 4px;
+        box-shadow: 2px 2px 6px #ccd4dd;
+        min-height: 34px;
+      }
+    }
+  }
+  //
+  .lmui-tooltip-top,
+  .lmui-tooltip-topLeft,
+  .lmui-tooltip-topRight {
+    padding-bottom: 4px;
+
+    .lmui-tooltip-content {
+      .lmui-tooltip-arrow {
+        border-bottom-width: 0;
+        border-top-color: rgba(64, 64, 64, 0.85);
+        margin-left: -5px;
+        bottom: -4px;
+      }
+    }
+  }
+
+  .lmui-tooltip-top {
+    transform: translateX(-50%);
+
+    .lmui-tooltip-content {
+      .lmui-tooltip-arrow {
+        left: 50%;
+      }
+    }
+  }
+
+  .lmui-tooltip-topLeft {
+    transform: translateX(-25%);
+
+    .lmui-tooltip-content {
+      .lmui-tooltip-arrow {
+        left: 25%;
+      }
+    }
+  }
+
+  .lmui-tooltip-topRight {
+    transform: translateX(-75%);
+
+    .lmui-tooltip-content {
+      .lmui-tooltip-arrow {
+        left: 75%;
+      }
+    }
+  }
+  //
+  .lmui-tooltip-right,
+  .lmui-tooltip-rightBottom,
+  .lmui-tooltip-rightTop {
+    padding-left: 4px;
+
+    .lmui-tooltip-content {
+      .lmui-tooltip-arrow {
+        border-left-width: 0;
+        border-right-color: rgba(64, 64, 64, 0.85);
+        margin-top: -5px;
+        left: -4px;
+      }
+    }
+  }
+
+  .lmui-tooltip-right {
+    transform: translateY(-50%);
+
+    .lmui-tooltip-content {
+      .lmui-tooltip-arrow {
+        top: 50%;
+      }
+    }
+  }
+
+  .lmui-tooltip-rightBottom {
+    transform: translateY(-75%);
+
+    .lmui-tooltip-content {
+      .lmui-tooltip-arrow {
+        top: 75%;
+      }
+    }
+  }
+
+  .lmui-tooltip-rightTop {
+    transform: translateY(-25%);
+
+    .lmui-tooltip-content {
+      .lmui-tooltip-arrow {
+        top: 25%;
+      }
+    }
+  }
+  //
+  .lmui-tooltip-bottom,
+  .lmui-tooltip-bottomLeft,
+  .lmui-tooltip-bottomRight {
+    padding-top: 4px;
+
+    .lmui-tooltip-content {
+      .lmui-tooltip-arrow {
+        border-top-width: 0;
+        border-bottom-color: rgba(64, 64, 64, 0.85);
+        margin-left: -5px;
+        top: -4px;
+      }
+    }
+  }
+
+  .lmui-tooltip-bottom {
+    transform: translateX(-50%);
+
+    .lmui-tooltip-content {
+      .lmui-tooltip-arrow {
+        left: 50%;
+      }
+    }
+  }
+
+  .lmui-tooltip-bottomLeft {
+    transform: translateX(-25%);
+
+    .lmui-tooltip-content {
+      .lmui-tooltip-arrow {
+        left: 25%;
+      }
+    }
+  }
+
+  .lmui-tooltip-bottomRight {
+    transform: translateX(-75%);
+
+    .lmui-tooltip-content {
+      .lmui-tooltip-arrow {
+        left: 75%;
+      }
+    }
+  }
+  //
+  .lmui-tooltip-left,
+  .lmui-tooltip-leftBottom,
+  .lmui-tooltip-leftTop {
+    padding-right: 4px;
+
+    .lmui-tooltip-content {
+      .lmui-tooltip-arrow {
+        border-right-width: 0;
+        border-left-color: rgba(64, 64, 64, 0.85);
+        margin-top: -5px;
+        right: -4px;
+      }
+    }
+  }
+
+  .lmui-tooltip-left {
+    transform: translateY(-50%);
+
+    .lmui-tooltip-content {
+      .lmui-tooltip-arrow {
+        top: 50%;
+      }
+    }
+  }
+
+  .lmui-tooltip-leftBottom {
+    transform: translateY(-75%);
+
+    .lmui-tooltip-content {
+      .lmui-tooltip-arrow {
+        top: 75%;
+      }
+    }
+  }
+
+  .lmui-tooltip-leftTop {
+    transform: translateY(-25%);
+
+    .lmui-tooltip-content {
+      .lmui-tooltip-arrow {
+        top: 25%;
+      }
+    }
+  }
+  //
+  .lmui-tooltip-top-enter,
+  .lmui-tooltip-topLeft-enter,
+  .lmui-tooltip-topRight-enter {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .lmui-tooltip-right-enter,
+  .lmui-tooltip-rightBottom-enter,
+  .lmui-tooltip-rightTop-enter {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .lmui-tooltip-bottom-enter,
+  .lmui-tooltip-bottomLeft-enter,
+  .lmui-tooltip-bottomRight-enter {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .lmui-tooltip-left-enter,
+  .lmui-tooltip-leftBottom-enter,
+  .lmui-tooltip-leftTop-enter {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+  }
+}

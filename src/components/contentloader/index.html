@@ -1,0 +1,24 @@
+<svg class="lmui-contentloader <%=containerClass%>" viewBox="0 0 <%=width%> <%=height%>" version="1.1" preserveAspectRatio="<%=preserveAspectRatio%>">
+  <rect clip-path="url(#y5xmiii26he)" x="0" y="0" width="<%=width%>" height="<%=height%>" style="fill: url(&quot;#cey3myfufcs&quot;);"></rect>
+  <defs>
+    <clipPath id="y5xmiii26he">
+      <rect x="70" y="15" rx="4" ry="4" width="117" height="6.4"></rect>
+      <rect x="70" y="35" rx="3" ry="3" width="85" height="6.4"></rect>
+      <rect x="0" y="80" rx="3" ry="3" width="350" height="6.4"></rect>
+      <rect x="0" y="100" rx="3" ry="3" width="380" height="6.4"></rect>
+      <rect x="0" y="120" rx="3" ry="3" width="201" height="6.4"></rect>
+      <circle cx="30" cy="30" r="30"></circle>
+    </clipPath>
+    <linearGradient id="cey3myfufcs">
+      <stop offset="-1.89817" stop-color="<%=primaryColor%>">
+        <% if (animate) { %><animate attributeName="offset" values="-2; 1" dur="2s" repeatCount="indefinite"></animate><% } %>
+      </stop>
+      <stop offset="-1.39817" stop-color="<%=secondaryColor%>">
+        <% if (animate) { %><animate attributeName="offset" values="-1.5; 1.5" dur="2s" repeatCount="indefinite"></animate><% } %>
+      </stop>
+      <stop offset="-0.898168" stop-color="<%=primaryColor%>">
+        <% if (animate) { %><animate attributeName="offset" values="-1; 2" dur="2s" repeatCount="indefinite"></animate><% } %>
+      </stop>
+    </linearGradient>
+  </defs>
+</svg>
