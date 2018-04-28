@@ -1,6 +1,6 @@
 import html from './index.html';
 import { request } from '../../util';
-import { Scroller } from '@lmui/index.js';
+import { Scroller } from '@lmui';
 
 export default function() {
   const app = window.app || document.getElementById('app');

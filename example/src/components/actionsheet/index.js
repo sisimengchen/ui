@@ -1,5 +1,5 @@
 import html from './index.html';
-import { Actionsheet } from '@lmui/index.js';
+import { Actionsheet } from '@lmui';
 
 export default function() {
   const app = window.app || document.getElementById('app');

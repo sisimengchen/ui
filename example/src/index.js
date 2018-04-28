@@ -1,5 +1,6 @@
 import './index.less';
-import '@lmui/index.css';
+import '@lmui-style'; // 这里是个坑 需要在config的resolve中解决
+import { Header } from '@lmui';
 import index from './components/index';
 import actionsheet from './components/actionsheet';
 import button from './components/button';
@@ -7,7 +8,6 @@ import checklist from './components/checklist';
 import contentloader from './components/contentloader';
 import scroller from './components/scroller';
 import toast from './components/toast';
-import { Header } from '@lmui/index.js';
 
 const headerEl = document.getElementById('header');
 window.header = new Header({

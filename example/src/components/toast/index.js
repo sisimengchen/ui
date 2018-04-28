@@ -1,5 +1,5 @@
 import html from './index.html';
-import { toast } from '@lmui/index.js';
+import { toast } from '@lmui';
 
 export default function() {
   const app = window.app || document.getElementById('app');

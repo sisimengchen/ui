@@ -1,5 +1,5 @@
 import html from './index.html';
-import { ContentLoader } from '@lmui/index.js';
+import { ContentLoader } from '@lmui';
 
 export default function() {
   const app = window.app || document.getElementById('app');

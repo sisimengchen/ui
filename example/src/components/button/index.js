@@ -1,5 +1,5 @@
 import html from './index.html';
-import { Button } from '@lmui/index.js';
+import { Button } from '@lmui';
 
 export default function() {
   const app = window.app || document.getElementById('app');

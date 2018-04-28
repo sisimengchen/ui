@@ -1,5 +1,5 @@
 import html from './index.html';
-import { CheckList } from '@lmui/index.js';
+import { CheckList } from '@lmui';
 
 export default function() {
   const app = window.app || document.getElementById('app');
