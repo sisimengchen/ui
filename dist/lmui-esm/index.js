@@ -1023,9 +1023,11 @@ class Popbase extends BaseView {
 
   // 关闭完毕后操作
   _doAfterClose() {
+    const { $options } = this;
+    const { destoryOnClose } = $options;
     popManager.closeOverlay(this.uid());
     this.isClosing = false;
-    if (this.destoryOnClose) {
+    if (destoryOnClose) {
       this.destory();
     }
   }
@@ -1043,7 +1045,7 @@ class Popbase extends BaseView {
     this.bodyOverflow = null;
     // this.bodyPaddingRight = null;
     if (this.element) {
-      this.element.parentNode.removeChild(this.element);
+      this.element.remove();
     }
     delete this.element;
   }
