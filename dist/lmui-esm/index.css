@@ -20,6 +20,115 @@
   visibility: hidden;
   opacity: 0;
 }
+.lmui-field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+.lmui-field .lmui-cell-title {
+  width: 80px;
+  -webkit-box-flex: 0;
+  -ms-flex: none;
+  -webkit-flex: none;
+          flex: none;
+}
+.lmui-field .lmui-cell-text:first-child:only-child {
+  font-size: 19px;
+}
+.lmui-field .lmui-cell-value {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  -webkit-flex: 1;
+          flex: 1;
+  color: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 18px;
+}
+.lmui-field.is-nolabel .lmui-cell-title {
+  display: none;
+}
+.lmui-field.is-textarea {
+  -webkit-box-align: inherit;
+  -ms-flex-align: inherit;
+  -webkit-align-items: inherit;
+          align-items: inherit;
+}
+.lmui-field.is-textarea .lmui-cell-title {
+  padding: 10px 0;
+}
+.lmui-field.is-textarea .lmui-cell-value {
+  padding: 5px 0;
+}
+.lmui-field-core {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-border-radius: 0;
+          border-radius: 0;
+  border: 0;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  -webkit-flex: 1;
+          flex: 1;
+  outline: 0;
+  line-height: 1.6;
+  font-size: inherit;
+  width: 100%;
+}
+.lmui-field-clear {
+  opacity: 0.2;
+}
+.lmui-field-state {
+  color: inherit;
+  margin-left: 20px;
+}
+.lmui-field-state .mintui {
+  font-size: 20px;
+}
+.lmui-field-state.is-default {
+  margin-left: 0;
+}
+.lmui-field-state.is-success {
+  color: #4caf50;
+}
+.lmui-field-state.is-warning {
+  color: #ffc107;
+}
+.lmui-field-state.is-error {
+  color: #f44336;
+}
+.lmui-field-other {
+  top: 0;
+  right: 0;
+  position: relative;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.lmui-animate {
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+.lmui-animate.infinite {
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+.lmui-visible {
+  visibility: visible;
+  opacity: 1;
+}
+.lmui-invisible {
+  visibility: hidden;
+  opacity: 0;
+}
 .lmui-cell {
   background-color: #fff;
   -webkit-box-sizing: border-box;
@@ -185,164 +294,6 @@
   visibility: hidden;
   opacity: 0;
 }
-.lmui-field {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-}
-.lmui-field .lmui-cell-title {
-  width: 80px;
-  -webkit-box-flex: 0;
-  -ms-flex: none;
-  -webkit-flex: none;
-          flex: none;
-}
-.lmui-field .lmui-cell-text:first-child:only-child {
-  font-size: 19px;
-}
-.lmui-field .lmui-cell-value {
-  -webkit-box-flex: 1;
-  -ms-flex: 1;
-  -webkit-flex: 1;
-          flex: 1;
-  color: inherit;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  font-size: 18px;
-}
-.lmui-field.is-nolabel .lmui-cell-title {
-  display: none;
-}
-.lmui-field.is-textarea {
-  -webkit-box-align: inherit;
-  -ms-flex-align: inherit;
-  -webkit-align-items: inherit;
-          align-items: inherit;
-}
-.lmui-field.is-textarea .lmui-cell-title {
-  padding: 10px 0;
-}
-.lmui-field.is-textarea .lmui-cell-value {
-  padding: 5px 0;
-}
-.lmui-field-core {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  -webkit-border-radius: 0;
-          border-radius: 0;
-  border: 0;
-  -webkit-box-flex: 1;
-  -ms-flex: 1;
-  -webkit-flex: 1;
-          flex: 1;
-  outline: 0;
-  line-height: 1.6;
-  font-size: inherit;
-  width: 100%;
-}
-.lmui-field-clear {
-  opacity: 0.2;
-}
-.lmui-field-state {
-  color: inherit;
-  margin-left: 20px;
-}
-.lmui-field-state .mintui {
-  font-size: 20px;
-}
-.lmui-field-state.is-default {
-  margin-left: 0;
-}
-.lmui-field-state.is-success {
-  color: #4caf50;
-}
-.lmui-field-state.is-warning {
-  color: #ffc107;
-}
-.lmui-field-state.is-error {
-  color: #f44336;
-}
-.lmui-field-other {
-  top: 0;
-  right: 0;
-  position: relative;
-}
-
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-.lmui-animate {
-  -webkit-animation-duration: 0.3s;
-          animation-duration: 0.3s;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-}
-.lmui-animate.infinite {
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-}
-.lmui-visible {
-  visibility: visible;
-  opacity: 1;
-}
-.lmui-invisible {
-  visibility: hidden;
-  opacity: 0;
-}
-.lmui-actionsheet {
-  background: #e0e0e0;
-  width: 100%;
-  text-align: center;
-}
-.lmui-actionsheet .lmui-actionsheet-container {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.lmui-actionsheet .lmui-actionsheet-container .lmui-actionsheet-item {
-  display: block;
-  width: 100%;
-  height: 50px;
-  line-height: 50px;
-  font-size: 18px;
-  color: #333;
-  background-color: #fff;
-  border-bottom: 1px solid #e0e0e0;
-}
-.lmui-actionsheet .lmui-actionsheet-container .lmui-actionsheet-item:active {
-  background-color: #f0f0f0;
-}
-.lmui-actionsheet .lmui-actionsheet-container .lmui-actionsheet-cancel {
-  margin-top: 5px;
-}
-
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-.lmui-animate {
-  -webkit-animation-duration: 0.3s;
-          animation-duration: 0.3s;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-}
-.lmui-animate.infinite {
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-}
-.lmui-visible {
-  visibility: visible;
-  opacity: 1;
-}
-.lmui-invisible {
-  visibility: hidden;
-  opacity: 0;
-}
 .lmui-button {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -442,6 +393,55 @@
   visibility: hidden;
   opacity: 0;
 }
+.lmui-actionsheet {
+  background: #e0e0e0;
+  width: 100%;
+  text-align: center;
+}
+.lmui-actionsheet .lmui-actionsheet-container {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.lmui-actionsheet .lmui-actionsheet-container .lmui-actionsheet-item {
+  display: block;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  font-size: 18px;
+  color: #333;
+  background-color: #fff;
+  border-bottom: 1px solid #e0e0e0;
+}
+.lmui-actionsheet .lmui-actionsheet-container .lmui-actionsheet-item:active {
+  background-color: #f0f0f0;
+}
+.lmui-actionsheet .lmui-actionsheet-container .lmui-actionsheet-cancel {
+  margin-top: 5px;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.lmui-animate {
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+.lmui-animate.infinite {
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+.lmui-visible {
+  visibility: visible;
+  opacity: 1;
+}
+.lmui-invisible {
+  visibility: hidden;
+  opacity: 0;
+}
 .lmui-checklist .lmui-checklist-title {
   color: #888;
   display: block;
@@ -515,97 +515,6 @@
 .lmui-checklist.is-limit .lmui-checklist-label .lmui-checkbox .lmui-checkbox-core {
   background-color: #d9d9d9;
   border-color: #d9d9d9;
-}
-
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-.lmui-animate {
-  -webkit-animation-duration: 0.3s;
-          animation-duration: 0.3s;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-}
-.lmui-animate.infinite {
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-}
-.lmui-visible {
-  visibility: visible;
-  opacity: 1;
-}
-.lmui-invisible {
-  visibility: hidden;
-  opacity: 0;
-}
-.lmui-header {
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-          align-items: center;
-  background-color: #4359aa;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  color: #fff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  font-size: 18px;
-  height: 44px;
-  line-height: 1;
-  padding: 0 15px;
-  position: relative;
-  text-align: center;
-  white-space: nowrap;
-}
-.lmui-header .lmui-button {
-  background-color: transparent;
-  border: 0;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  color: inherit;
-  display: inline-block;
-  padding: 0;
-  font-size: inherit;
-}
-.lmui-header .lmui-button::after {
-  content: none;
-}
-.lmui-header.is-fixed {
-  top: 0;
-  right: 0;
-  left: 0;
-  position: fixed;
-  z-index: 1;
-}
-.lmui-header-button {
-  -webkit-box-flex: 0.5;
-  -ms-flex: 0.5;
-  -webkit-flex: 0.5;
-          flex: 0.5;
-}
-.lmui-header-button > a {
-  color: inherit;
-}
-.lmui-header-button.is-right {
-  text-align: right;
-}
-.lmui-header-button.is-left {
-  text-align: left;
-}
-.lmui-header-title {
-  overflow: hidden;
-  -o-text-overflow: ellipsis;
-     text-overflow: ellipsis;
-  white-space: nowrap;
-  font-size: inherit;
-  font-weight: 400;
-  -webkit-box-flex: 1;
-  -ms-flex: 1;
-  -webkit-flex: 1;
-          flex: 1;
 }
 
 * {
@@ -985,6 +894,97 @@
 }
 .lmui-alert .lmui-dialog-foot {
   border-top: 1px solid #e6e6e6;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.lmui-animate {
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+.lmui-animate.infinite {
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+.lmui-visible {
+  visibility: visible;
+  opacity: 1;
+}
+.lmui-invisible {
+  visibility: hidden;
+  opacity: 0;
+}
+.lmui-header {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  background-color: #4359aa;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 18px;
+  height: 44px;
+  line-height: 1;
+  padding: 0 15px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+}
+.lmui-header .lmui-button {
+  background-color: transparent;
+  border: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  color: inherit;
+  display: inline-block;
+  padding: 0;
+  font-size: inherit;
+}
+.lmui-header .lmui-button::after {
+  content: none;
+}
+.lmui-header.is-fixed {
+  top: 0;
+  right: 0;
+  left: 0;
+  position: fixed;
+  z-index: 1;
+}
+.lmui-header-button {
+  -webkit-box-flex: 0.5;
+  -ms-flex: 0.5;
+  -webkit-flex: 0.5;
+          flex: 0.5;
+}
+.lmui-header-button > a {
+  color: inherit;
+}
+.lmui-header-button.is-right {
+  text-align: right;
+}
+.lmui-header-button.is-left {
+  text-align: left;
+}
+.lmui-header-title {
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: inherit;
+  font-weight: 400;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  -webkit-flex: 1;
+          flex: 1;
 }
 
 * {
