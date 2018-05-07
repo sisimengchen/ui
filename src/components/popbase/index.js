@@ -1,7 +1,7 @@
 'use strict';
 import { mergeOptions, assign } from '@util';
 import { BaseView } from '../../components/eventclass/index';
-import popManager from '../../components/popManager/index';
+import popManager from '../../components/popmanager/index';
 // 默认配置
 const defaultOptions = {
   // 外包容器
