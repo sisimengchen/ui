@@ -6,8 +6,15 @@ import actionsheet from './components/actionsheet';
 import button from './components/button';
 import checklist from './components/checklist';
 import contentloader from './components/contentloader';
+import dialog from './components/dialog';
+import picker from './components/picker';
+import popover from './components/popover';
+import popup from './components/popup';
+import radiolist from './components/radiolist';
 import scroller from './components/scroller';
+import Switch from './components/switch';
 import toast from './components/toast';
+import tooltip from './components/tooltip';
 
 const headerEl = document.getElementById('header');
 window.header = new Header({
@@ -47,8 +54,15 @@ const routes = {
   '/button': button,
   '/checklist': checklist,
   '/contentloader': contentloader,
+  '/dialog': dialog,
+  '/picker': picker,
+  '/popover': popover,
+  '/popup': popup,
+  '/radiolist': radiolist,
   '/scroller': scroller,
-  '/toast': toast
+  '/switch': Switch,
+  '/toast': toast,
+  '/tooltip': tooltip
 };
 
 const router = window.Router(routes);

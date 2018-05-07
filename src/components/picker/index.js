@@ -5,6 +5,8 @@ import { mergeOptions, assign, vendorPrefix, renderScroll } from '@util';
 import ScrollerCore from '../../util/scroller';
 import tpl from './index.html';
 const defaultOptions = {
+  // 外包容器class
+  containerClass: 'lmui-picker-container',
   // 是否支持横向滚动
   scrollingX: false,
   // 是否支持竖向滚动
@@ -35,7 +37,7 @@ const defaultOptions = {
 
 const classOptions = {
   className: 'Picker',
-  events: ['onScroll', 'onScrollOver'],
+  events: ['onChange'],
   template: tpl
 };
 
@@ -48,18 +50,22 @@ export default class Picker extends BaseView {
   aferRender() {
     const { $options } = this;
     const { defaultIndex, data } = $options;
-    this.element = this.parentElement.firstElementChild.firstElementChild;
-    this.content = this.element.firstElementChild;
-    this.content.style[`${vendorPrefix}TransformOrigin`] = 'left top';
-    this.scrollingComplete = () => {
-      this.dispatch('onScrollOver');
+    this.indicator = this.element.firstElementChild;
+    this.group = this.indicator.firstElementChild;
+    this.group.style[`${vendorPrefix}TransformOrigin`] = 'left top';
+    $options.scrollingComplete = () => {
+      const { top } = this.scrollerCore.getValues();
+      const height = this.indicator.clientHeight;
+      if (top % height === 0) {
+        const index = parseInt(top / height, 10);
+        if (this.currentIndex !== index) {
+          this.currentIndex = index;
+          this.dispatch('onChange', index, data[index]);
+        }
+      }
     };
     this.scrollerCore = new ScrollerCore((left, top, zoom) => {
-      const height = this.element.clientHeight;
-      const index = parseInt(top / height, 10);
-      this.currentIndex = index;
-      this.dispatch('onScroll', this.currentIndex, data[this.currentIndex]);
-      renderScroll(this.content, left, top, zoom);
+      renderScroll(this.group, left, top, zoom);
     }, $options);
     this._initEvent();
     this.reflow();
@@ -76,7 +82,7 @@ export default class Picker extends BaseView {
     );
     // touch devices bind touch events
     if ('ontouchstart' in window) {
-      this.element.parentNode.addEventListener(
+      this.element.addEventListener(
         'touchstart',
         (e) => {
           // Don't react if initial down happens on a form element
@@ -89,7 +95,7 @@ export default class Picker extends BaseView {
         },
         false
       );
-      this.element.parentNode.addEventListener(
+      this.element.addEventListener(
         'touchmove',
         (e) => {
           e.preventDefault();
@@ -97,14 +103,14 @@ export default class Picker extends BaseView {
         },
         false
       );
-      this.element.parentNode.addEventListener(
+      this.element.addEventListener(
         'touchend',
         (e) => {
           this.scrollerCore.doTouchEnd(e.timeStamp);
         },
         false
       );
-      this.element.parentNode.addEventListener(
+      this.element.addEventListener(
         'touchcancel',
         (e) => {
           this.scrollerCore.doTouchEnd(e.timeStamp);
@@ -114,7 +120,7 @@ export default class Picker extends BaseView {
       // non-touch bind mouse events
     } else {
       let mousedown = false;
-      this.element.parentNode.addEventListener(
+      this.element.addEventListener(
         'mousedown',
         (e) => {
           if (e.target.tagName.match(/input|textarea|select/i)) {
@@ -166,7 +172,7 @@ export default class Picker extends BaseView {
         },
         false
       );
-      this.element.parentNode.addEventListener(
+      this.element.addEventListener(
         'mousewheel',
         (e) => {
           if (this.zooming) {
@@ -182,20 +188,26 @@ export default class Picker extends BaseView {
   reflow() {
     // set the right scroller dimensions
     this.scrollerCore.setDimensions(
-      this.element.clientWidth,
-      this.element.clientHeight,
-      this.content.offsetWidth,
-      this.content.offsetHeight
+      this.indicator.clientWidth,
+      this.indicator.clientHeight,
+      this.group.offsetWidth,
+      this.group.offsetHeight
     );
     // refresh the position for zooming purposes
-    const rect = this.element.getBoundingClientRect();
-    this.scrollerCore.setPosition(rect.left + this.element.clientLeft, rect.top + this.element.clientTop);
+    const rect = this.indicator.getBoundingClientRect();
+    this.scrollerCore.setPosition(rect.left + this.indicator.clientLeft, rect.top + this.indicator.clientTop);
   }
 
   setCurrent(index) {
-    const height = this.element.clientHeight;
-    this.scrollerCore.scrollTo(0, height * index);
-    this.currentIndex = index;
+    const { $options } = this;
+    const { data } = $options;
+    const size = data.length || 0;
+    if (index >= 0 && index < size && this.currentIndex !== index) {
+      const height = this.indicator.clientHeight;
+      this.scrollerCore.scrollTo(0, height * index);
+      this.currentIndex = index;
+      this.dispatch('onChange', index, data[index]);
+    }
   }
 
   setData(data) {
@@ -205,7 +217,7 @@ export default class Picker extends BaseView {
       const item = data[i];
       htmls.push(`<div class="lmui-picker-item">${item.text}</div>`);
     }
-    this.content.innerHTML = htmls.join('');
+    this.group.innerHTML = htmls.join('');
     this.reflow();
   }
 }

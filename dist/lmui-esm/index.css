@@ -1015,7 +1015,7 @@
   background-color: #fff;
   height: 250px;
 }
-.lmui-picker .lmui-picker-container {
+.lmui-picker .lmui-picker-indicator {
   position: relative;
   width: 100%;
   height: 50px;
@@ -1030,7 +1030,7 @@
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
 }
-.lmui-picker .lmui-picker-container:before {
+.lmui-picker .lmui-picker-indicator:before {
   content: " ";
   position: absolute;
   left: 0;
@@ -1046,7 +1046,7 @@
       -ms-transform: scaleY(0.5);
           transform: scaleY(0.5);
 }
-.lmui-picker .lmui-picker-container:after {
+.lmui-picker .lmui-picker-indicator:after {
   content: " ";
   position: absolute;
   left: 0;
@@ -1062,7 +1062,7 @@
       -ms-transform: scaleY(0.5);
           transform: scaleY(0.5);
 }
-.lmui-picker .lmui-picker-container .lmui-picker-content .lmui-picker-item {
+.lmui-picker .lmui-picker-indicator .lmui-picker-group .lmui-picker-item {
   height: 50px;
   width: 100%;
   display: block;
@@ -1206,62 +1206,6 @@
   visibility: hidden;
   opacity: 0;
 }
-.lmui-scroller {
-  position: relative;
-  width: 100%;
-  height: 400px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  overflow: hidden;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-}
-.lmui-scroller .lmui-scroller-container .lmui-scroller-refresh {
-  background-color: #7b91aa;
-  color: #fff;
-  text-align: center;
-  line-height: 50px;
-  font-size: 16px;
-}
-.lmui-scroller .lmui-scroller-container .lmui-scroller-refresh.active {
-  background-color: #006eb3;
-}
-.lmui-scroller .lmui-scroller-container .lmui-scroller-refresh.running {
-  background-color: #00b373;
-}
-.lmui-scroller .lmui-scroller-container .lmui-scroller-refresh .lmui-scroller-content {
-  background-color: #fff;
-  -webkit-transform-origin: left top;
-      -ms-transform-origin: left top;
-          transform-origin: left top;
-  -webkit-transform: translateZ(0);
-          transform: translateZ(0);
-}
-
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-.lmui-animate {
-  -webkit-animation-duration: 0.3s;
-          animation-duration: 0.3s;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-}
-.lmui-animate.infinite {
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-}
-.lmui-visible {
-  visibility: visible;
-  opacity: 1;
-}
-.lmui-invisible {
-  visibility: hidden;
-  opacity: 0;
-}
 .lmui-spin {
   position: absolute;
   left: 0;
@@ -1366,6 +1310,62 @@
   top: 50%;
   width: 100%;
   padding-top: 25px;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.lmui-animate {
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+.lmui-animate.infinite {
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+.lmui-visible {
+  visibility: visible;
+  opacity: 1;
+}
+.lmui-invisible {
+  visibility: hidden;
+  opacity: 0;
+}
+.lmui-scroller {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: hidden;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.lmui-scroller .lmui-scroller-container .lmui-scroller-refresh {
+  background-color: #7b91aa;
+  color: #fff;
+  text-align: center;
+  line-height: 50px;
+  font-size: 16px;
+}
+.lmui-scroller .lmui-scroller-container .lmui-scroller-refresh.active {
+  background-color: #006eb3;
+}
+.lmui-scroller .lmui-scroller-container .lmui-scroller-refresh.running {
+  background-color: #00b373;
+}
+.lmui-scroller .lmui-scroller-container .lmui-scroller-refresh .lmui-scroller-content {
+  background-color: #fff;
+  -webkit-transform-origin: left top;
+      -ms-transform-origin: left top;
+          transform-origin: left top;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
 }
 
 * {

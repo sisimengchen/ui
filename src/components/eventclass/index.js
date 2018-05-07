@@ -260,8 +260,8 @@ const classOptions = {
   events: ['onCreate', 'onDestory'], // 组件事件
   template: '', // 组件模板
   // components: null, // 组件列表 { className : options }
-  el: null, // 组件渲染所挂载的父亲dom 可以是dom也可以使选择器
-  cntr: null // 组件最外层dom，可以是dom也可以使选择器，如果为空，则会使用template渲染出的最外层
+  el: null, // 组件渲染所挂载的父亲dom 可以是dom也可以使用选择器，最终会被解释成this.parentElement
+  cntr: null // 组件最外层dom，可以是dom也可以使选择器，如果为空，则会使用template渲染出的最外层，最终会被解释成this.element
 };
 
 /**
